@@ -28,10 +28,7 @@ export default function Home() {
   return (
     <div className="c-container">
       <TopBar />
-      <WeatherContainer
-        cityName={cityName}
-        currentWeather={currentLocation?.currentWeather}
-      />
+      <WeatherContainer cityName={cityName} currentLocation={currentLocation} />
       <WeatherList weatherList={dailyForecasts} showFullDetails={false} />
     </div>
   );

@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addLocationToFavorites,
@@ -28,8 +27,7 @@ const WeatherContainer = ({ cityName, currentWeather }) => {
   return (
     <div>
       <LocationContainer
-        cityName={cityName}
-        currentWeather={currentWeather}
+        currentWeather={currentLocation}
         toggleFavorite={toggleFavorite}
         isFavorite={isFavorite}
       />

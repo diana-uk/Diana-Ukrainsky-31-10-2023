@@ -2,19 +2,28 @@ import { useSelector } from "react-redux";
 import classes from "./Weather/WeatherCard.module.css";
 import FavoritesButton from "./Buttons/FavoritesButton";
 
-const LocationContainer = ({
-  cityName,
-  currentWeather,
-  toggleFavorite,
-  isFavorite,
-}) => {
+const LocationContainer = ({ currentWeather, toggleFavorite, isFavorite }) => {
   const tempUnit = useSelector((state) => state.weather.currentTempUnit);
+
+  if (!currentWeather) {
+    return null;
+  }
+
+  const {
+    currentWeather: {
+      weatherIcon = "",
+      temperature: { metric = "", imperial = "" } = {},
+      weatherText = "",
+    } = {},
+    name = "Unknown Location",
+  } = currentWeather;
+
   return (
     <div className="c-current-weather">
       <div>
         <div className={classes["c-weather-card-image"]}>
           <img
-            src={`../src/assets/weather-icons/${currentWeather?.weatherIcon}.png`}
+            src={`./src/assets/weather-icons/${weatherIcon}.png`}
             alt="weather icon"
           />
           <div>
@@ -22,16 +31,14 @@ const LocationContainer = ({
               className="gray-text"
               style={{ color: "black", fontSize: "3rem" }}
             >
-              {tempUnit.toLowerCase() === "c"
-                ? currentWeather?.temperature.metric
-                : currentWeather?.temperature.imperial}
+              {tempUnit.toLowerCase() === "c" ? metric : imperial}
               &deg;{tempUnit.toUpperCase()}
             </div>
             <div
               className="gray-text"
               style={{ color: "black", fontSize: "3rem" }}
             >
-              {cityName}
+              {name}
             </div>
           </div>
         </div>
@@ -52,7 +59,7 @@ const LocationContainer = ({
               width: "70%",
             }}
           >
-            {currentWeather?.weatherText}
+            {weatherText}
           </div>
           <div style={{ width: "30%", paddingLeft: "5%" }}>
             {

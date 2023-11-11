@@ -1,6 +1,6 @@
 import { uiActions } from "./ui-slice";
 
-const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiKey = "HKzPEB55NPMqyCEGzXdHICgayWi3m6FM";
 
 // Common fetchData function to make API requests
 export const fetchData = async (url, queries = "", functionName) => {
