@@ -1,5 +1,0 @@
-{
-  "/currentconditions/v1/:cityId?*": "/defaultCurrentWeather",
-  "/forecasts/v1/daily/5day/:cityId?*": "/dailyForecasts?Id=:cityId",
-  "/locations/v1/cities/autocomplete?*&q=:term": "/autocomplete?term=:term"
-}

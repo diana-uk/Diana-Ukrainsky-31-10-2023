@@ -4,6 +4,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/weather-app/",
   plugins: [svgr(), react()],
-  base: "/Diana-Ukrainsky-31-10-2023",
 });
