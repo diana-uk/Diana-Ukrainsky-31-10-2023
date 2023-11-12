@@ -56,7 +56,7 @@ const WeatherCard = ({ showFullDetails, weatherItem }) => {
       </div>
       <div className={classes["c-weather-card-image"]}>
         <img
-          src={`/src/assets/weather-icons/${weatherItem?.dayWeather.icon}.png`}
+          src={`/assets/weather-icons/${weatherItem?.dayWeather.icon}.png`}
           alt="weather icon"
         />
       </div>
@@ -88,7 +88,7 @@ const WeatherCard = ({ showFullDetails, weatherItem }) => {
         {weatherItem?.name || "Unknown Location"}
         <div className={classes["c-weather-card-image"]}>
           <img
-            src={`/src/assets/weather-icons/${weatherItem?.currentWeather.weatherIcon}.png`}
+            src={`/assets/weather-icons/${weatherItem?.currentWeather.weatherIcon}.png`}
             alt="weather icon"
           />
         </div>
