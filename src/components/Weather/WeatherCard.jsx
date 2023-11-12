@@ -9,7 +9,6 @@ import { convertTemperature, getDayOfWeek } from "../../utils/weatherFunctions";
 // WeatherItem can be a city with weather(Favorites page)
 //  or a 5-day forecast item (Home page)
 const WeatherCard = ({ showFullDetails, weatherItem }) => {
-  console.log(windIcon);
   const tempUnit = useSelector((state) => state.weather.currentTempUnit);
 
   const dispatch = useDispatch();

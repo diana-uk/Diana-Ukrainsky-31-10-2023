@@ -6,4 +6,4 @@ export const CURRENT_WEATHER_API_URL = `${REAL_ACCUWEATHER_API_BASE_URL}/current
 export const FORECAST_API_URL = `${REAL_ACCUWEATHER_API_BASE_URL}/forecasts/v1/daily/5day`;
 export const AUTOCOMPLETE_API_URL = `${REAL_ACCUWEATHER_API_BASE_URL}/locations/v1/cities/autocomplete`;
 export const GEOLOCATION_API_URL = `${REAL_ACCUWEATHER_API_BASE_URL}/locations/v1/cities/geoposition/search`;
-export const ACCUWEATHER_API_KEY = "HkHCGbwMUfPoEP1GvNR5GHtd5bLg1DRk";
+export const ACCUWEATHER_API_KEY = "4XmjFsbqpd0HGOWVFrLVGg4Gcys0Guvc";
