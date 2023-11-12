@@ -9,6 +9,7 @@ import { convertTemperature, getDayOfWeek } from "../../utils/weatherFunctions";
 // WeatherItem can be a city with weather(Favorites page)
 //  or a 5-day forecast item (Home page)
 const WeatherCard = ({ showFullDetails, weatherItem }) => {
+  console.log(windIcon);
   const tempUnit = useSelector((state) => state.weather.currentTempUnit);
 
   const dispatch = useDispatch();
@@ -56,7 +57,7 @@ const WeatherCard = ({ showFullDetails, weatherItem }) => {
       </div>
       <div className={classes["c-weather-card-image"]}>
         <img
-          src={`/assets/weather-icons/${weatherItem?.dayWeather.icon}.png`}
+          src={`../../assets/weather-icons/${weatherItem?.dayWeather.icon}.png`}
           alt="weather icon"
         />
       </div>
@@ -88,7 +89,7 @@ const WeatherCard = ({ showFullDetails, weatherItem }) => {
         {weatherItem?.name || "Unknown Location"}
         <div className={classes["c-weather-card-image"]}>
           <img
-            src={`/assets/weather-icons/${weatherItem?.currentWeather.weatherIcon}.png`}
+            src={`../../assets/weather-icons/${weatherItem?.currentWeather.weatherIcon}.png`}
             alt="weather icon"
           />
         </div>
