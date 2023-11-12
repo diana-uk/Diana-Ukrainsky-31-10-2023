@@ -56,7 +56,7 @@ const WeatherCard = ({ showFullDetails, weatherItem }) => {
       </div>
       <div className={classes["c-weather-card-image"]}>
         <img
-          src={`../../assets/weather-icons/${weatherItem?.dayWeather.icon}.png`}
+          src={`https://raw.githubusercontent.com/diana-uk/Diana-Ukrainsky-31-10-2023/diana-abra-weather-app/assets/weather-icons/${weatherItem?.dayWeather.icon}.png`}
           alt="weather icon"
         />
       </div>
@@ -88,7 +88,7 @@ const WeatherCard = ({ showFullDetails, weatherItem }) => {
         {weatherItem?.name || "Unknown Location"}
         <div className={classes["c-weather-card-image"]}>
           <img
-            src={`../../assets/weather-icons/${weatherItem?.currentWeather.weatherIcon}.png`}
+            src={`https://raw.githubusercontent.com/diana-uk/Diana-Ukrainsky-31-10-2023/diana-abra-weather-app/assets/weather-icons/${weatherItem?.currentWeather.weatherIcon}.png`}
             alt="weather icon"
           />
         </div>

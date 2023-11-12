@@ -23,7 +23,7 @@ const LocationContainer = ({ currentWeather, toggleFavorite, isFavorite }) => {
       <div>
         <div className={classes["c-weather-card-image"]}>
           <img
-            src={`../../assets/weather-icons/${weatherIcon}.png`}
+            src={`https://raw.githubusercontent.com/diana-uk/Diana-Ukrainsky-31-10-2023/diana-abra-weather-app/assets/weather-icons/${weatherIcon}.png`}
             alt="weather icon"
           />
           <div>
