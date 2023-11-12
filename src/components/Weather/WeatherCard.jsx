@@ -73,7 +73,11 @@ const WeatherCard = ({ showFullDetails, weatherItem }) => {
   );
 
   const renderFullDetails = () => (
-    <Link to="/" onClick={handleClick} style={{ textDecoration: "none" }}>
+    <Link
+      to="/Diana-Ukrainsky-31-10-2023/"
+      onClick={handleClick}
+      style={{ textDecoration: "none" }}
+    >
       <div
         className={classes["c-weather-card-weather"]}
         style={{

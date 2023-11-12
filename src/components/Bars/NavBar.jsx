@@ -8,13 +8,18 @@ const Header = () => {
   return (
     <div>
       <nav className={classes.nav}>
-        <Link to="/" className={classes["site-title"]}>
+        <Link
+          to="/Diana-Ukrainsky-31-10-2023/"
+          className={classes["site-title"]}
+        >
           <h1>abra Weather Task</h1>
           <img src={cloudIcon}></img>
         </Link>
         <ul>
-          <CustomLink to="/">Home</CustomLink>
-          <CustomLink to="/favorites">Favorites</CustomLink>
+          <CustomLink to="/Diana-Ukrainsky-31-10-2023/">Home</CustomLink>
+          <CustomLink to="/Diana-Ukrainsky-31-10-2023/favorites">
+            Favorites
+          </CustomLink>
         </ul>
         <DarkMode />
       </nav>

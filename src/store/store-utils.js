@@ -1,18 +1,30 @@
 import { uiActions } from "./ui-slice";
+import { ACCUWEATHER_API_KEY } from "../config/config";
 
-const apiKey = "HKzPEB55NPMqyCEGzXdHICgayWi3m6FM";
-
-// Common fetchData function to make API requests
+// Common fetchData function to make API requests for the weather, forecast,
+// autocomplete data and search by geolocation
 export const fetchData = async (url, queries = "", functionName) => {
   const queryString = queries ? `&${queries}` : "";
-  const response = await fetch(`${url}?apikey=${apiKey}${queryString}`);
+  const fullUrl = `${url}?apikey=${ACCUWEATHER_API_KEY}${queryString}`;
+  const middlewareUrl = "https://api.allorigins.win/get?url=";
 
-  if (!response.ok) {
-    throw new Error(`${functionName}: API request failed`);
+  try {
+    const response = await fetch(
+      `${middlewareUrl}${encodeURIComponent(fullUrl)}`
+    );
+
+    if (!response.ok) {
+      throw new Error(`${functionName}: API request failed`);
+    }
+
+    const responseData = await response.json();
+    const data = JSON.parse(responseData.contents);
+
+    return data;
+  } catch (error) {
+    console.error(error);
+    throw new Error(`${functionName}: Unable to fetch data`);
   }
-
-  const data = await response.json();
-  return data;
 };
 
 export const handleFetchError = (dispatch, error, actionName) => {

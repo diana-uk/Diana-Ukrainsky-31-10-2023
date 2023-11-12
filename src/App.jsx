@@ -49,8 +49,11 @@ function App() {
         )}
         <div className={classes.container}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/Diana-Ukrainsky-31-10-2023/" element={<Home />} />
+            <Route
+              path="/Diana-Ukrainsky-31-10-2023/favorites"
+              element={<Favorites />}
+            />
           </Routes>
         </div>
       </div>
