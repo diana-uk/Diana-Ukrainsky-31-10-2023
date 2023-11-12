@@ -1,4 +1,4 @@
-// URLs and endpoints for the AccuWeather API
+// URLs and endpoints for the AccuWeather API to use across the app
 export const WEATHER_API_BASE_URL = "http://localhost:3000";
 export const REAL_ACCUWEATHER_API_BASE_URL =
   "https://dataservice.accuweather.com/";
